@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Happy Birthday </title>
+	<style>
+		body{
+			background-image: url("ribbon.gif");
+		}
+		h1{
+			font-family: fantasy;
+			text-align: center;
+			background-color: black;
+			color:white;
+			font-size: 250%;
+			width: 70%;
+			margin-left: 15%;
+			margin-right: 15%;
+		}
+		div.img{
+			text-align: center;
+		}
+		p{
+			text-align: center;
+			background-color:black;
+			color:white;
+			width: 40%;
+			margin-left: 30%;
+			margin-right: 30%;
+			font-family: fantasy;
+			font-size: 200%;
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+	<script type="text/javascript">
+		function check()
+		{
+			var a=confirm("Today is your birthday?");
+			if (a == true){
+				document.getElementById("over").src="present.gif";
+				document.getElementById("para1").innerHTML="Happy Birthday~!\n Congratulations."
+				document.getElementById("para1").style.color="white";
+				document.getElementById("para1").style.backgroundColor="pink";
+				document.getElementById("para1").style.fontSize="400%";
+				document.getElementById("para2").innerHTML="Congratulations on your birthday.\n Thank you for being born in this world."
+				document.getElementById("para2").style.backgroundColor="pink";
+				
+			}
+			else if (a == false){
+				alert("Ah! It is not your birthday.\n See you on your birthday!\n Bye~!");
+			}
+		}
+	</script>
+
+
+	<h1 id="para1"> The birthday gift delivery has arrived.<br/> Will you accept the present? </h1>
+	<div class="img">
+	<img id="over" src="overaction.gif" onclick="check()" align="center" width="60%" height="60%">
+	<button id="over" scr="overaction.gif" onclick="check()"> Present </button>
+</div>
+	<p id="para2"> Click the overaction rabbit or button </p>
+</body>
+</html>
